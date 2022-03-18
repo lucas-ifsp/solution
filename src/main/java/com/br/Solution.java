@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Solution {
 
     public int solution(int[] a, int[] b){
+        if(a == null || b == null) return 0;
         if(a.length != b.length) return 0;
-        if(a.length == 1) return 0;
+        if(a.length <= 1) return 0;
 
         final int sumA = Arrays.stream(a).sum();
         final int sumB = Arrays.stream(b).sum();

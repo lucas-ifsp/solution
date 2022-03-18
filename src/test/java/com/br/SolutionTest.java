@@ -56,4 +56,17 @@ class SolutionTest {
     void shouldReturn0IfTheArraysHaveDifferentSizes() {
         assertEquals(0, sut.solution(new int[]{2}, new int[]{1,-1}));
     }
+
+    @Test
+    @DisplayName("should return zero if arrays are null")
+    void shouldReturnZeroIfArraysAreNull() {
+        assertEquals(0, sut.solution(null, null));
+    }
+
+    @Test
+    @DisplayName("should return zero if arrays are empty")
+    void shouldReturnZeroIfArraysAreEmpty() {
+        assertEquals(0, sut.solution(new int[]{}, new int[]{}));
+    }
+
 }
